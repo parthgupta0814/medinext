@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Family Members - MediNest</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#404752",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-variant": "#e1e3e4",
+                    "primary-fixed": "#d3e4ff",
+                    "surface-dim": "#d9dadb",
+                    "primary-fixed-dim": "#a2c9ff",
+                    "secondary-fixed-dim": "#7ddc7a",
+                    "on-primary": "#ffffff",
+                    "outline": "#707783",
+                    "surface-container-highest": "#e1e3e4",
+                    "error": "#ba1a1a",
+                    "surface": "#f8f9fa",
+                    "on-primary-container": "#fdfcff",
+                    "on-background": "#191c1d",
+                    "on-secondary-container": "#0c7521",
+                    "on-secondary-fixed-variant": "#005313",
+                    "tertiary": "#8f4a00",
+                    "primary": "#005ea4",
+                    "on-tertiary-fixed": "#2f1400",
+                    "secondary-fixed": "#98f994",
+                    "on-primary-fixed": "#001c38",
+                    "on-secondary-fixed": "#002204",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#a2c9ff",
+                    "on-tertiary-fixed-variant": "#6f3800",
+                    "surface-container": "#edeeef",
+                    "secondary-container": "#98f994",
+                    "tertiary-container": "#b35e00",
+                    "tertiary-fixed-dim": "#ffb780",
+                    "inverse-surface": "#2e3132",
+                    "background": "#f8f9fa",
+                    "surface-tint": "#0060a8",
+                    "secondary": "#006e1c",
+                    "on-surface": "#191c1d",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdcc4",
+                    "primary-container": "#0077ce",
+                    "outline-variant": "#c0c7d4",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f8f9fa",
+                    "on-primary-fixed-variant": "#004881"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up professional headshot of a friendly man with a kind expression in soft daylight, clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq1QboCbo8CW0_i7QFzyAJIF-35xIL1diMrEtoD2enILjLcDPoQVIalBfIUlUKITUUy2xhvGLkncZRZR_Zb-DbQCwXZnmnT-qiDIADkHeFPQRMAskwYX5aeHkkXIK2BXVlBAzNiHt-etg8Hhvug7Y7rIxFEQJmFdKCeOYYcy8-g1lI2Y7HcvZ6UcW9ND09GZou7w48j_PPLKOoaPpVa_C6vm_7mXLFlnKJstNsM9sD5Gr_NgHxG4qpYtFut2NhYxGPw8zj3iQ5xll5"/>
+</div>
+<span class="font-['Manrope'] font-bold text-lg tracking-tight text-blue-700 dark:text-blue-400">MediNest</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold text-on-surface tracking-tight mb-2">Family Members</h1>
+<p class="text-on-surface-variant text-sm font-medium">Manage and monitor health profiles for your household.</p>
+</div>
+<!-- Bento Grid Layout for Family Members -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Member Card: Sarah (Mother) -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden p-5 flex items-center gap-6 shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] transition-all hover:shadow-[0_12px_32px_-4px_rgba(0,0,0,0.08)]">
+<div class="relative w-24 h-24 shrink-0">
+<div class="absolute inset-0 bg-secondary/10 rounded-full scale-110 blur-md"></div>
+<img alt="Mother" class="relative w-full h-full object-cover rounded-full border-4 border-surface-container-lowest shadow-sm" data-alt="Portrait of a smiling woman in her 40s with warm expression, soft natural lighting, elegant and trustworthy vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrt2jhGTIGGKN7UTfQ33sXnHgGC7JeP8aBLrQnVZJzGrL_fp-43W7VKiT2nk34jM3X523AU1MjcuKj077wi5NvR1qEXuzHwK45AwT0LXEhTUnkXhRLt1v_8FTovrzg1oyR5bBz_xPrubJuj43Vq54yBbFABnzPLhlH2lpm6dAwUAmu2eBicxs3LNhUlfbgyfUtO-mnnCZJ8LFkYzpUzt24UtzLqLADYY87Tni3mtw9PPxl5ef4ecajpjeS1q-LLjtx4qUHv_ZtMdP-"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h2 class="text-xl font-bold text-on-surface leading-none">Sarah Jenkins</h2>
+<span class="text-xs font-semibold text-secondary uppercase tracking-wider">Mother • Head of Household</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">O Positive</span>
+</div>
+<div class="flex items-center gap-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]" data-icon="cake">cake</span>
+<span>42 Years</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]" data-icon="monitor_heart">monitor_heart</span>
+<span>Healthy</span>
+</div>
+</div>
+</div>
+<button class="absolute top-4 right-4 p-2 text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Member Card: David (Father) -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden p-5 flex items-center gap-6 shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] transition-all hover:shadow-[0_12px_32px_-4px_rgba(0,0,0,0.08)]">
+<div class="relative w-24 h-24 shrink-0">
+<div class="absolute inset-0 bg-primary/10 rounded-full scale-110 blur-md"></div>
+<img alt="Father" class="relative w-full h-full object-cover rounded-full border-4 border-surface-container-lowest shadow-sm" data-alt="Professional man in his late 40s, friendly smiling face, outdoors with soft bokeh background, high-end editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArJXOn3pJ1Nexz4eY_t7RJIF9UkIcAYRH6IbWQo_nVh-JaoevkciI-AfQn-q2Q5GJBN7xYZqAgpZd1mRbqaDMdeRdcqjt6CjDM0H3nng-1nNH6jFxLqVHVYWdnQHr4YZcuYqnW95RXJeM02LVJNkpHFlLXaS6zL3Gd3KFdVvjlaHLrzhHJ0LqFibbdyKj73uZMQTuDTrmiRzIhW2tN7oBj_xo0-DHeq8gGKxKpqpRBWEnIo3cgRf0otg7otx4g-j1R8kAe7XCz4gFl"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h2 class="text-xl font-bold text-on-surface leading-none">David Jenkins</h2>
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Father</span>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full text-xs font-bold">A Negative</span>
+</div>
+<div class="flex items-center gap-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]" data-icon="cake">cake</span>
+<span>45 Years</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]" data-icon="medication">medication</span>
+<span>1 Routine</span>
+</div>
+</div>
+</div>
+<button class="absolute top-4 right-4 p-2 text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Member Card: Leo (Child) -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden p-5 flex items-center gap-6 shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] transition-all hover:shadow-[0_12px_32px_-4px_rgba(0,0,0,0.08)]">
+<div class="relative w-24 h-24 shrink-0">
+<div class="absolute inset-0 bg-tertiary/10 rounded-full scale-110 blur-md"></div>
+<img alt="Child" class="relative w-full h-full object-cover rounded-full border-4 border-surface-container-lowest shadow-sm" data-alt="Close up of a happy young child laughing, warm sunlight, joyful atmosphere, high quality photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVhW5xOPX4H3v_6m9ZL_3e-EjuyKxEZTAF3UjiCDhyZ2zVwlrtolGKBVWr4uqSNjwKsvaWD4jKtuFsYpPxd1FW25jHKP-rlDGkfuozQuiIu7UeGNNSYPIw_5AOpYpUNxSKvyHCCpLxJgU1TnZzoxX6KgoiUcE_dcmom7zb6-MF22U4QoZFEVyqW1jIZoMieYScfAfTjhO1Kb02kFCDY6iVOD8uBa7a0UJ2lkvCqzHpLsZfGfzfTs_I9aPdIhuVr-hQtT-HMTZ3HurG"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h2 class="text-xl font-bold text-on-surface leading-none">Leo Jenkins</h2>
+<span class="text-xs font-semibold text-tertiary uppercase tracking-wider">Son</span>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold">O Positive</span>
+</div>
+<div class="flex items-center gap-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]" data-icon="cake">cake</span>
+<span>8 Years</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]" data-icon="vaccines">vaccines</span>
+<span>Up to date</span>
+</div>
+</div>
+</div>
+<button class="absolute top-4 right-4 p-2 text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Empty Placeholder / Invitation Card -->
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-8 flex flex-col items-center justify-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-outline" data-icon="person_add">person_add</span>
+</div>
+<div class="text-center">
+<p class="font-bold text-on-surface">Add Caregiver</p>
+<p class="text-xs text-on-surface-variant">Invite another adult to manage the sanctuary</p>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB: Add Family Member -->
+<button class="fixed bottom-28 right-6 w-16 h-16 rounded-2xl bg-primary text-on-primary flex items-center justify-center shadow-[0_8px_24px_rgba(0,94,164,0.3)] hover:scale-105 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined text-3xl font-bold" data-icon="add">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-6 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl rounded-t-[24px] z-50 shadow-[0_-8px_24px_-4px_rgba(0,0,0,0.06)]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="home_health">home_health</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 rounded-full px-5 py-1.5 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="family_restroom" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Family</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="medication">medication</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Medicines</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Records</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Settings</span>
+</a>
+</nav>
+</body></html>

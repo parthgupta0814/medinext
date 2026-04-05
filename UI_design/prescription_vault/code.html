@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prescription Vault - MediNest</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#404752",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-variant": "#e1e3e4",
+                        "primary-fixed": "#d3e4ff",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed-dim": "#a2c9ff",
+                        "secondary-fixed-dim": "#7ddc7a",
+                        "on-primary": "#ffffff",
+                        "outline": "#707783",
+                        "surface-container-highest": "#e1e3e4",
+                        "error": "#ba1a1a",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#fdfcff",
+                        "on-background": "#191c1d",
+                        "on-secondary-container": "#0c7521",
+                        "on-secondary-fixed-variant": "#005313",
+                        "tertiary": "#8f4a00",
+                        "primary": "#005ea4",
+                        "on-tertiary-fixed": "#2f1400",
+                        "secondary-fixed": "#98f994",
+                        "on-primary-fixed": "#001c38",
+                        "on-secondary-fixed": "#002204",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#a2c9ff",
+                        "on-tertiary-fixed-variant": "#6f3800",
+                        "surface-container": "#edeeef",
+                        "secondary-container": "#98f994",
+                        "tertiary-container": "#b35e00",
+                        "tertiary-fixed-dim": "#ffb780",
+                        "inverse-surface": "#2e3132",
+                        "background": "#f8f9fa",
+                        "surface-tint": "#0060a8",
+                        "secondary": "#006e1c",
+                        "on-surface": "#191c1d",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdcc4",
+                        "primary-container": "#0077ce",
+                        "outline-variant": "#c0c7d4",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed-variant": "#004881"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .vitals-gradient {
+            background: linear-gradient(135deg, #005ea4 0%, #0077ce 100%);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .header-font {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="professional headshot of a smiling man in his 40s against a clean soft blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcoJ1Q4XtzAlyTzTVUMxa_0OQWQeksQwG_aervXdS8lJ8UYPPhnOgPZSUh_lVcGFMIsRWbaVAH8l5cQYWosRQIm1BOfCKAy9YVkWKBf0c6IQ1YKlZCOt_mV2kX8KHthc10ALExmtBipdF09VmA6HzO_WEi5eiWTngxg_2BJyEuoGlLJE2u18B6lh6ZHB8O4Vj6ZLdwmXHeuftD2csoEFYp7bn8_5ZXTDperv1joBbYXDNsMrFZmTLyFkyZ3PMgZeF2Rqg_8GFxnnCm"/>
+</div>
+<h1 class="font-['Manrope'] font-extrabold text-xl tracking-tighter text-blue-700 dark:text-blue-400">MediNest</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined text-slate-500">notifications</span>
+</button>
+</div>
+</header>
+<main class="mt-24 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<div class="mb-10">
+<h2 class="font-headline font-bold text-3xl tracking-tight text-on-background mb-2">Prescription Vault</h2>
+<p class="text-on-surface-variant font-body">Manage and access your family's medical directives in one secure digital sanctuary.</p>
+</div>
+<!-- Filters/Tabs -->
+<div class="flex gap-3 mb-8 overflow-x-auto pb-2 no-scrollbar">
+<button class="px-5 py-2.5 rounded-full bg-primary text-on-primary font-medium text-sm whitespace-nowrap">All Records</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm whitespace-nowrap">Recent</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm whitespace-nowrap">By Doctor</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm whitespace-nowrap">Emergency</button>
+</div>
+<!-- Prescription Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Prescription Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(0,0,0,0.06)] group cursor-pointer border border-transparent hover:border-primary/10 transition-all">
+<div class="h-48 overflow-hidden relative">
+<img alt="Knee Surgery Prescription" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="close up of a medical prescription document with handwritten notes and a stethoscope on a clean white medical desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTw8hNaAwfZXJ7dbp7g5nfEYzaidFaSXOaSvJelQ5zrmxo4KV0oJIKtlAnu-FMWFf_rxZM2aELvz7QSs_P2yRpnK2Hk6JeEgFdof2ghw2mjEXeOADgyRPdT-oTSorSG_PRDCDpE4qUZOBqismf5deCAdIGMbXV4L6_OqVbj5JbgWlbioQlhc2ZbBk7jzrCEnWWGnlLa7D6_zMVl3m7rhEH61sQjl7segmyQQnwFv-aK3iFpYkUd7EZ8R5wWtEIO5CSUUeD1UvcMWx8"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-wider">Verified</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight mb-1">Knee Surgery Prescription</h3>
+<p class="text-primary font-semibold text-sm">Dr. Aris Thorne</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-4 mt-6 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-xs font-medium">Oct 12, 2023</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">description</span>
+<span class="text-xs font-medium">PDF • 1.2 MB</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Prescription Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(0,0,0,0.06)] group cursor-pointer transition-all border border-transparent hover:border-primary/10">
+<div class="h-48 overflow-hidden relative">
+<img alt="Annual Wellness Plan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="macro shot of prescription medicine bottles and tablets on a clean organized medicine cabinet shelf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtuEskU6TOz09t_RwIiSdVGcfCuCyFMXM5E9S_OJWEKSR1tyMCncx-NvousQNN0qgg0mxTMg1K6G2AI9CJlVIl7rL-pwBPbiTSOlR_AL0PHaU-ZiPkrwZ7sBHJ02vzLV42GlgbWPAA0z3KGN4q8sXvJ64nNtlGL8wAA6SOaxDsjg9_l1ewtkkNt88IenQf80UHuTFMecE5rLLo6xvC5Th7fBSFoFL3cpRIC8KnDAurvW669GirccKPN6RaLKmlqRZRQbg6YU5us76z"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight mb-1">Annual Wellness Plan</h3>
+<p class="text-primary font-semibold text-sm">Dr. Sarah Jenkins</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-4 mt-6 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-xs font-medium">Sep 05, 2023</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">description</span>
+<span class="text-xs font-medium">JPG • 4.5 MB</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Prescription Card 3 (Asymmetric Layout Hint) -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(0,0,0,0.06)] group cursor-pointer transition-all border border-transparent hover:border-primary/10">
+<div class="h-48 overflow-hidden relative">
+<img alt="Dermatology Protocol" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="close up of medical laboratory results with a pair of glasses on a brightly lit clinical table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW7n3q1EQiClgsKTAH3HPQJvEOJvE7VCBOv4KiB37vc6O2oWufbjGA8t9YKi11mqg_Lr87xct8YnuvpfPTQV_KnEHoma725fGRSo1T11IG-XJbW9JpK6Ah00nouKDscdUO6uvYnzfsRV9A2izVprUyIRMhTzh-Csz1AtHqI23djc9J0oFqRJYGU4uFqgrSM4PWwB_SvspEV6dqn2U0dsyPvC-qZvWBHCY-s7jWS_U4rySvMsFBahGDBAv1U_2YocR6shflpWH00UED"/>
+<div class="absolute top-4 right-4 bg-tertiary-container/90 backdrop-blur px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-on-tertiary-container text-sm">priority_high</span>
+<span class="text-[10px] font-bold text-on-tertiary-container uppercase tracking-wider">Urgent Refill</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight mb-1">Dermatology Protocol</h3>
+<p class="text-primary font-semibold text-sm">Dr. Michael Chen</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-4 mt-6 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-xs font-medium">Aug 22, 2023</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">description</span>
+<span class="text-xs font-medium">PDF • 0.8 MB</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Prescription Card 4 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(0,0,0,0.06)] group cursor-pointer transition-all border border-transparent hover:border-primary/10">
+<div class="h-48 overflow-hidden relative">
+<img alt="Cardiology Report" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="digital tablet showing a medical record dashboard with graphs and data in a high-tech hospital room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAffW5V6suWdx5fRJbufCtix6FTTmLISL3l4JDktT1sNI_IbDo2wHsj9JdN1q-cq18OBnows_E87L8ZrqWG_XhSZVqTyLbde3fWt3bHpxqnwArHSMXI9V5ih-CP0u5nBElrmoA1eIu7BrAgC1Er7pvFbYUFS45zjNpb0ndYE10wWeYPRV_7IL0QZRi9L4F2ydMwNDRSjdZbxQe7kQL98cDSYD6N5eg1OfAfC_jNVXdZxuipGSIGSLMftgF8sYakX8iRYBigfXrdGuZI"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight mb-1">Cardiology Report</h3>
+<p class="text-primary font-semibold text-sm">Dr. Elena Rodriguez</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-4 mt-6 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-xs font-medium">Jul 14, 2023</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">description</span>
+<span class="text-xs font-medium">PDF • 3.1 MB</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Suggestion (if grid was smaller) -->
+<div class="mt-16 p-12 border-2 border-dashed border-outline-variant rounded-2xl flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-outline text-3xl">add_a_photo</span>
+</div>
+<h4 class="font-headline font-bold text-xl text-on-surface mb-2">Missing a record?</h4>
+<p class="text-on-surface-variant max-w-sm">Tap the camera icon below to instantly scan and secure a new medical document.</p>
+</div>
+</main>
+<!-- Upload Prescription FAB -->
+<button class="fixed bottom-28 right-6 w-16 h-16 rounded-2xl vitals-gradient text-on-primary shadow-[0_8px_24px_-4px_rgba(0,94,164,0.4)] flex items-center justify-center z-50 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined text-3xl">photo_camera</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl rounded-t-[24px] z-50 shadow-[0_-8px_24px_-4px_rgba(0,0,0,0.06)]">
+<div class="flex justify-around items-center px-4 pt-3 pb-6">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined">home_health</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Home</span>
+</a>
+<!-- Family -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined">family_restroom</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Family</span>
+</a>
+<!-- Medicines -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined">medication</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Medicines</span>
+</a>
+<!-- Records (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 rounded-full px-5 py-1.5 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Records</span>
+</a>
+<!-- Settings -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MediNest - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#404752",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-variant": "#e1e3e4",
+                    "primary-fixed": "#d3e4ff",
+                    "surface-dim": "#d9dadb",
+                    "primary-fixed-dim": "#a2c9ff",
+                    "secondary-fixed-dim": "#7ddc7a",
+                    "on-primary": "#ffffff",
+                    "outline": "#707783",
+                    "surface-container-highest": "#e1e3e4",
+                    "error": "#ba1a1a",
+                    "surface": "#f8f9fa",
+                    "on-primary-container": "#fdfcff",
+                    "on-background": "#191c1d",
+                    "on-secondary-container": "#0c7521",
+                    "on-secondary-fixed-variant": "#005313",
+                    "tertiary": "#8f4a00",
+                    "primary": "#005ea4",
+                    "on-tertiary-fixed": "#2f1400",
+                    "secondary-fixed": "#98f994",
+                    "on-primary-fixed": "#001c38",
+                    "on-secondary-fixed": "#002204",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#a2c9ff",
+                    "on-tertiary-fixed-variant": "#6f3800",
+                    "surface-container": "#edeeef",
+                    "secondary-container": "#98f994",
+                    "tertiary-container": "#b35e00",
+                    "tertiary-fixed-dim": "#ffb780",
+                    "inverse-surface": "#2e3132",
+                    "background": "#f8f9fa",
+                    "surface-tint": "#0060a8",
+                    "secondary": "#006e1c",
+                    "on-surface": "#191c1d",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdcc4",
+                    "primary-container": "#0077ce",
+                    "outline-variant": "#c0c7d4",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f8f9fa",
+                    "on-primary-fixed-variant": "#004881"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close up professional headshot of a friendly smiling middle aged healthcare administrator with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt1iZSITP3R0Aa5wr33VHMg-wCPHIJG_HlUuOyFpBufxIs4S3i18OWEmgvv7shRKYhU_q-D-vvIRc0rLNrkJlHs-L3azw4n9HjKrXGWQNCTh4veTSqWFXZGEyldwe-g4bQ_Ji538BMhTbYz90DeOmbD-p__2-1vwh2fQVk1PG6MmyqSa6HFAc6Zw--qnMUXL8ShYl2M12htnesMpJE9vDc1_jV207tX1WSteqkT5EuZvvyaQxjq1YvpbHWiqXjDb42F7porUXoo5Ng"/>
+</div>
+<h1 class="font-['Manrope'] font-bold text-lg tracking-tight text-blue-700 dark:text-blue-400">MediNest</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Settings Header Section -->
+<section class="mb-8">
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface mb-2">Settings</h2>
+<p class="text-on-surface-variant font-medium">Manage your sanctuary and health data privacy.</p>
+</section>
+<!-- Profile Quick Card -->
+<div class="bg-surface-container-lowest rounded-xl p-5 mb-8 shadow-sm flex items-center gap-4">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface">Family Premium Plan</h3>
+<p class="text-sm text-secondary font-medium">Secure local sync active</p>
+</div>
+<button class="ml-auto text-primary font-semibold text-sm">Update</button>
+</div>
+<!-- Settings Groups -->
+<div class="space-y-6">
+<!-- Preferences Group -->
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4 px-2">Preferences</p>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<!-- Notification Settings -->
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">notifications_active</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Notification Settings</p>
+<p class="text-xs text-on-surface-variant">Manage medication and family alerts</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Theme Settings -->
+<div class="flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Theme Settings</p>
+<p class="text-xs text-on-surface-variant">Switch between Light and Dark sanctuary</p>
+</div>
+</div>
+<div class="flex bg-surface-container-highest p-1 rounded-full">
+<button class="px-3 py-1 rounded-full bg-white shadow-sm text-xs font-bold text-primary">Light</button>
+<button class="px-3 py-1 rounded-full text-xs font-medium text-on-surface-variant">Dark</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Data & Security Group -->
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4 px-2">Data &amp; Privacy</p>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<!-- Data Management -->
+<button class="w-full flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors text-left">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">database</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Data Management</p>
+<p class="text-xs text-on-surface-variant">Export health records or import backups</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</button>
+<!-- Security Locks -->
+<button class="w-full flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors text-left">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">App Lock</p>
+<p class="text-xs text-on-surface-variant">Secure access with Biometric authentication</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- App Information Group -->
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4 px-2">System</p>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<!-- About -->
+<button class="w-full flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors text-left">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">info</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">About MediNest</p>
+<p class="text-xs text-on-surface-variant">Version 2.4.0 • View Credits</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Sign Out -->
+<button class="w-full py-4 text-error font-bold text-center bg-error-container/20 rounded-xl hover:bg-error-container/40 transition-colors">
+                Sign Out from Sanctuary
+            </button>
+</div>
+<!-- Privacy Shield Footer Component -->
+<div class="mt-12 mb-8 flex flex-col items-center opacity-60">
+<div class="flex items-center gap-2 text-on-surface-variant text-xs mb-1">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="font-medium">All health data is encrypted and stored locally.</span>
+</div>
+<p class="text-[10px] text-outline">MediNest Privacy Shield v2.0</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-6 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl rounded-t-[24px] z-50 shadow-[0_-8px_24px_-4px_rgba(0,0,0,0.06)]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined">home_health</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined">family_restroom</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Family</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined">medication</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Medicines</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Records</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 rounded-full px-5 py-1.5 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Settings</span>
+</a>
+</nav>
+</body></html>

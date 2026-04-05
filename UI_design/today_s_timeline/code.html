@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MediNest - Today's Medicine Timeline</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#404752",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-variant": "#e1e3e4",
+                        "primary-fixed": "#d3e4ff",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed-dim": "#a2c9ff",
+                        "secondary-fixed-dim": "#7ddc7a",
+                        "on-primary": "#ffffff",
+                        "outline": "#707783",
+                        "surface-container-highest": "#e1e3e4",
+                        "error": "#ba1a1a",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#fdfcff",
+                        "on-background": "#191c1d",
+                        "on-secondary-container": "#0c7521",
+                        "on-secondary-fixed-variant": "#005313",
+                        "tertiary": "#8f4a00",
+                        "primary": "#005ea4",
+                        "on-tertiary-fixed": "#2f1400",
+                        "secondary-fixed": "#98f994",
+                        "on-primary-fixed": "#001c38",
+                        "on-secondary-fixed": "#002204",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#a2c9ff",
+                        "on-tertiary-fixed-variant": "#6f3800",
+                        "surface-container": "#edeeef",
+                        "secondary-container": "#98f994",
+                        "tertiary-container": "#b35e00",
+                        "tertiary-fixed-dim": "#ffb780",
+                        "inverse-surface": "#2e3132",
+                        "background": "#f8f9fa",
+                        "surface-tint": "#0060a8",
+                        "secondary": "#006e1c",
+                        "on-surface": "#191c1d",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdcc4",
+                        "primary-container": "#0077ce",
+                        "outline-variant": "#c0c7d4",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed-variant": "#004881"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="portrait of a friendly middle-aged man with a warm smile, professional yet approachable medical consultant aesthetic, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqzG_He2Z5QTGDCpdsCjzlcVaEFi_YwDOiqUJ1W59viGnHAiJUu8o14upcmdJv_wTphlJFaqGb_lG0m4xpEnAsIAkVsIEKob_DB-Aj9TQH4mDpYaqVQRDVbovE3KlcoBiftcja3ehp0aqtKjS23L_WsmGDP7lOsh5D6YghKkeXkZtuynSGatTj56MvP9ND3gLrOyrD_W-bmTXrmrIETs2KrOBE6p2DdFbbRv5WDYlIyxlSZjd8tY6mQ4s1muCKVQbje7PG1dFGEa04"/>
+</div>
+<span class="font-['Manrope'] font-extrabold text-xl text-blue-700 dark:text-blue-400 tracking-tighter">MediNest</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all active:scale-95 duration-150 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Header Section -->
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold text-on-surface tracking-tight mb-1">Today's Schedule</h1>
+<p class="text-on-surface-variant font-medium">Monday, Oct 23</p>
+</div>
+<!-- Timeline Grid -->
+<div class="space-y-10 relative">
+<!-- Vertical Line Guide (Subtle) -->
+<div class="absolute left-4 top-4 bottom-4 w-px bg-outline-variant/30"></div>
+<!-- Morning Section -->
+<section class="relative pl-12">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="wb_sunny">wb_sunny</span>
+</div>
+<h2 class="text-lg font-bold text-on-surface mb-4">Morning</h2>
+<div class="space-y-4">
+<!-- Medication Card: Taken -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md border-l-4 border-secondary">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="medication">medication</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Lisinopril</h3>
+<p class="text-sm text-on-surface-variant">10mg • After Breakfast</p>
+<div class="mt-2 flex items-center gap-1.5 text-secondary text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Taken at 08:15 AM
+                                    </div>
+</div>
+</div>
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container px-2 py-1 rounded-full">08:00 AM</span>
+</div>
+</div>
+<!-- Medication Card: Taken -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md border-l-4 border-secondary">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="pill">pill</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Vitamin D3</h3>
+<p class="text-sm text-on-surface-variant">2000 IU • With Food</p>
+<div class="mt-2 flex items-center gap-1.5 text-secondary text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        Taken at 08:17 AM
+                                    </div>
+</div>
+</div>
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container px-2 py-1 rounded-full">08:00 AM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Afternoon Section -->
+<section class="relative pl-12">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="light_mode">light_mode</span>
+</div>
+<h2 class="text-lg font-bold text-on-surface mb-4">Afternoon</h2>
+<!-- Medication Card: Missed -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md border-l-4 border-error">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-error-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Metformin</h3>
+<p class="text-sm text-on-surface-variant">500mg • Lunchtime</p>
+<div class="mt-2 flex items-center gap-1.5 text-error text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]" data-icon="error" style="font-variation-settings: 'FILL' 1;">error</span>
+                                    Missed at 01:30 PM
+                                </div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container px-2 py-1 rounded-full">01:30 PM</span>
+<button class="text-xs font-bold text-primary underline">Log Now</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Evening Section -->
+<section class="relative pl-12">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="wb_twilight">wb_twilight</span>
+</div>
+<h2 class="text-lg font-bold text-on-surface mb-4">Evening</h2>
+<!-- Medication Card: Pending -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md border-l-4 border-primary">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="timer">timer</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Atorvastatin</h3>
+<p class="text-sm text-on-surface-variant">20mg • Before Bed</p>
+<div class="mt-3 flex gap-2">
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-xs font-bold shadow-sm active:scale-95 transition-transform">Mark Taken</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-2 rounded-lg text-xs font-bold active:scale-95 transition-transform">Skip</button>
+</div>
+</div>
+</div>
+<span class="text-xs font-bold text-primary bg-primary-fixed px-2 py-1 rounded-full">Pending • 08:00 PM</span>
+</div>
+</div>
+</section>
+<!-- Night Section -->
+<section class="relative pl-12 opacity-60">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-slate-500 text-sm" data-icon="bedtime">bedtime</span>
+</div>
+<h2 class="text-lg font-bold text-on-surface mb-4">Night</h2>
+<p class="text-sm text-on-surface-variant italic">No medications scheduled for tonight.</p>
+</section>
+</div>
+<!-- Privacy Shield Reminder -->
+<div class="mt-12 mb-8 bg-surface-container-low rounded-xl p-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant/60" data-icon="shield">shield</span>
+<span class="text-xs text-on-surface-variant font-medium">Your medication logs are encrypted and stored locally on this device.</span>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-6 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl rounded-t-[24px] z-50 shadow-[0_-8px_24px_-4px_rgba(0,0,0,0.06)]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="home_health">home_health</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="family_restroom">family_restroom</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Family</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 rounded-full px-5 py-1.5 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="medication" style="font-variation-settings: 'FILL' 1;">medication</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Medicines</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Records</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Settings</span>
+</a>
+</nav>
+<!-- FAB: Add New (Suppressed on this transactional-feeling screen as per instructions, but keeping it small if needed elsewhere) -->
+</body></html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Health Charts | MediNest</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#404752",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-variant": "#e1e3e4",
+                        "primary-fixed": "#d3e4ff",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed-dim": "#a2c9ff",
+                        "secondary-fixed-dim": "#7ddc7a",
+                        "on-primary": "#ffffff",
+                        "outline": "#707783",
+                        "surface-container-highest": "#e1e3e4",
+                        "error": "#ba1a1a",
+                        "surface": "#f8f9fa",
+                        "on-primary-container": "#fdfcff",
+                        "on-background": "#191c1d",
+                        "on-secondary-container": "#0c7521",
+                        "on-secondary-fixed-variant": "#005313",
+                        "tertiary": "#8f4a00",
+                        "primary": "#005ea4",
+                        "on-tertiary-fixed": "#2f1400",
+                        "secondary-fixed": "#98f994",
+                        "on-primary-fixed": "#001c38",
+                        "on-secondary-fixed": "#002204",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#a2c9ff",
+                        "on-tertiary-fixed-variant": "#6f3800",
+                        "surface-container": "#edeeef",
+                        "secondary-container": "#98f994",
+                        "tertiary-container": "#b35e00",
+                        "tertiary-fixed-dim": "#ffb780",
+                        "inverse-surface": "#2e3132",
+                        "background": "#f8f9fa",
+                        "surface-tint": "#0060a8",
+                        "secondary": "#006e1c",
+                        "on-surface": "#191c1d",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdcc4",
+                        "primary-container": "#0077ce",
+                        "outline-variant": "#c0c7d4",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed-variant": "#004881"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-fixed">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a middle-aged male doctor with a kind expression and silver hair, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOagxMRMuGoczXYvXI4kzxr_7Am47yGPLpfdqKKqBlQd-Cda3r0QLFd0DPjWNjb-5gHBdQ6UnGEKbJbzijXUZVmViCo0UjBjgpPOOUi03shs9tHDl8NcNakKHExQ6Lm9qP8nCTNUZZ7Z7y_bUurCR_XtkFwn8TfZoRm_RvjBS-hhjn1szRW8ukTH8w5Z0gCipDG520sjAfHOaWNsH4RH7nmksPa5IIyZhdFR8YFIhQ5M-N9USgJt034i6VQ4GjVCgmfaO86psy_555"/>
+</div>
+<h1 class="font-headline font-bold text-lg tracking-tight text-blue-700">MediNest</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-500 hover:bg-slate-100/50 p-2 rounded-full transition-all active:scale-95">notifications</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-5xl mx-auto">
+<!-- Hero Header -->
+<div class="mb-8">
+<h2 class="font-headline font-extrabold text-4xl tracking-tight text-on-surface mb-2">Health Analytics</h2>
+<p class="text-on-surface-variant font-medium">Visualizing your family's vital trends</p>
+</div>
+<!-- Time Range Selector -->
+<div class="flex p-1.5 bg-surface-container-low rounded-xl mb-10 w-fit">
+<button class="px-6 py-2 rounded-lg text-sm font-semibold transition-all bg-surface-container-lowest shadow-sm text-primary">1 week</button>
+<button class="px-6 py-2 rounded-lg text-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface">1 month</button>
+<button class="px-6 py-2 rounded-lg text-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface">3 months</button>
+</div>
+<!-- Charts Carousel Section -->
+<div class="relative mb-12">
+<div class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-6 pb-6">
+<!-- Blood Pressure Chart Card -->
+<div class="min-w-[85vw] md:min-w-[450px] snap-center bg-surface-container-lowest p-8 rounded-xl shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] transition-all">
+<div class="flex justify-between items-start mb-8">
+<div>
+<span class="text-primary font-bold text-xs uppercase tracking-widest mb-1 block">Vital Metric</span>
+<h3 class="font-headline font-bold text-2xl text-on-surface">Blood Pressure</h3>
+</div>
+<div class="bg-primary-fixed px-3 py-1 rounded-full text-on-primary-fixed font-bold text-sm tracking-tight">120/80</div>
+</div>
+<!-- SVG Simple Line Chart (Blue) -->
+<div class="h-48 w-full relative group">
+<svg class="w-full h-full drop-shadow-lg" viewbox="0 0 400 150">
+<defs>
+<lineargradient id="blueGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#005ea4" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#005ea4" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0 100 Q 50 120 100 80 T 200 60 T 300 90 T 400 40" fill="none" stroke="#005ea4" stroke-linecap="round" stroke-width="4"></path>
+<path d="M0 100 Q 50 120 100 80 T 200 60 T 300 90 T 400 40 V 150 H 0 Z" fill="url(#blueGrad)"></path>
+<!-- Interaction Dots -->
+<circle cx="200" cy="60" fill="#005ea4" r="6" stroke="white" stroke-width="2"></circle>
+</svg>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-outline uppercase tracking-tighter">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</div>
+</div>
+<!-- Blood Sugar Chart Card -->
+<div class="min-w-[85vw] md:min-w-[450px] snap-center bg-surface-container-lowest p-8 rounded-xl shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] transition-all">
+<div class="flex justify-between items-start mb-8">
+<div>
+<span class="text-secondary font-bold text-xs uppercase tracking-widest mb-1 block">Vital Metric</span>
+<h3 class="font-headline font-bold text-2xl text-on-surface">Blood Sugar</h3>
+</div>
+<div class="bg-secondary-container px-3 py-1 rounded-full text-on-secondary-container font-bold text-sm tracking-tight">96 mg/dL</div>
+</div>
+<!-- SVG Simple Line Chart (Green) -->
+<div class="h-48 w-full relative group">
+<svg class="w-full h-full drop-shadow-lg" viewbox="0 0 400 150">
+<defs>
+<lineargradient id="greenGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#006e1c" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#006e1c" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0 80 Q 80 40 160 90 T 320 60 T 400 70" fill="none" stroke="#006e1c" stroke-linecap="round" stroke-width="4"></path>
+<path d="M0 80 Q 80 40 160 90 T 320 60 T 400 70 V 150 H 0 Z" fill="url(#greenGrad)"></path>
+<!-- Interaction Dots -->
+<circle cx="320" cy="60" fill="#006e1c" r="6" stroke="white" stroke-width="2"></circle>
+</svg>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-outline uppercase tracking-tighter">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</div>
+</div>
+<!-- Extra Insight Placeholder -->
+<div class="min-w-[85vw] md:min-w-[450px] snap-center bg-primary-container p-8 rounded-xl shadow-lg flex flex-col justify-between">
+<div class="text-on-primary-container">
+<h3 class="font-headline font-bold text-2xl mb-4 leading-tight">Insight of the Week</h3>
+<p class="text-primary-fixed-dim leading-relaxed">Your family's BP trends have decreased by 4% compared to last month. Keep maintaining the current dietary habits!</p>
+</div>
+<div class="flex items-center gap-2 text-white font-semibold">
+<span class="material-symbols-outlined">trending_down</span>
+<span>Positive Trend</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Stats Table (High-End Editorial Style) -->
+<section class="mt-12">
+<h3 class="font-headline font-bold text-xl text-on-surface mb-6 px-2">Recent Readings</h3>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<div class="grid grid-cols-4 px-6 py-4 text-[10px] font-bold text-outline uppercase tracking-widest bg-surface-container-high/50">
+<div>Date</div>
+<div>Member</div>
+<div>Type</div>
+<div class="text-right">Value</div>
+</div>
+<div class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<div class="grid grid-cols-4 px-6 py-5 items-center hover:bg-surface-container transition-colors">
+<div class="text-sm font-semibold text-on-surface">Oct 24, 08:30</div>
+<div class="text-sm font-medium text-on-surface-variant">John Doe</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-sm font-medium text-on-surface">BP</span>
+</div>
+<div class="text-right font-headline font-bold text-on-surface">118/76</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-4 px-6 py-5 items-center hover:bg-surface-container transition-colors">
+<div class="text-sm font-semibold text-on-surface">Oct 23, 19:15</div>
+<div class="text-sm font-medium text-on-surface-variant">Alice Doe</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-sm font-medium text-on-surface">Sugar</span>
+</div>
+<div class="text-right font-headline font-bold text-on-surface">94</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-4 px-6 py-5 items-center hover:bg-surface-container transition-colors">
+<div class="text-sm font-semibold text-on-surface">Oct 23, 07:45</div>
+<div class="text-sm font-medium text-on-surface-variant">John Doe</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-sm font-medium text-on-surface">BP</span>
+</div>
+<div class="text-right font-headline font-bold text-on-surface">122/82</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-6 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl rounded-t-[24px] z-50 shadow-[0_-8px_24px_-4px_rgba(0,0,0,0.06)]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80" href="#">
+<span class="material-symbols-outlined">home_health</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80" href="#">
+<span class="material-symbols-outlined">family_restroom</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Family</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80" href="#">
+<span class="material-symbols-outlined">medication</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Medicines</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 rounded-full px-5 py-1.5 transition-all transition-all duration-200 ease-out scale-90" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Records</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Settings</span>
+</a>
+</nav>
+</body></html>

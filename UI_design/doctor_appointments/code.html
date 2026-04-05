@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#404752",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-variant": "#e1e3e4",
+                    "primary-fixed": "#d3e4ff",
+                    "surface-dim": "#d9dadb",
+                    "primary-fixed-dim": "#a2c9ff",
+                    "secondary-fixed-dim": "#7ddc7a",
+                    "on-primary": "#ffffff",
+                    "outline": "#707783",
+                    "surface-container-highest": "#e1e3e4",
+                    "error": "#ba1a1a",
+                    "surface": "#f8f9fa",
+                    "on-primary-container": "#fdfcff",
+                    "on-background": "#191c1d",
+                    "on-secondary-container": "#0c7521",
+                    "on-secondary-fixed-variant": "#005313",
+                    "tertiary": "#8f4a00",
+                    "primary": "#005ea4",
+                    "on-tertiary-fixed": "#2f1400",
+                    "secondary-fixed": "#98f994",
+                    "on-primary-fixed": "#001c38",
+                    "on-secondary-fixed": "#002204",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#a2c9ff",
+                    "on-tertiary-fixed-variant": "#6f3800",
+                    "surface-container": "#edeeef",
+                    "secondary-container": "#98f994",
+                    "tertiary-container": "#b35e00",
+                    "tertiary-fixed-dim": "#ffb780",
+                    "inverse-surface": "#2e3132",
+                    "background": "#f8f9fa",
+                    "surface-tint": "#0060a8",
+                    "secondary": "#006e1c",
+                    "on-surface": "#191c1d",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdcc4",
+                    "primary-container": "#0077ce",
+                    "outline-variant": "#c0c7d4",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f8f9fa",
+                    "on-primary-fixed-variant": "#004881"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-fixed flex items-center justify-center">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Professional headshot of a smiling middle-aged man with short hair in a clean white studio setting, soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuDORMCK5rYch21IWurCDlBLdUyb1dzOGj9b9MDMDcpRydXCtGN5BNmVYll8adk4iPQzzx6-kk4bThd5EtNYTBtIeR_IgouonsZk-vaYrKNFUGeDujFfpLGuO7HfnPGOkWE-a47Z7St5NkPWmvQjUcZy373vYOWmpknNW_0IFLP1kTdwn7koh8YZNjscDpfBJxVG2gw9hj7u2QFMfEhC1iW8TUsKx43-Pc-TPJp_Z4-r2BKGLZVgg9v6xCJQnc8CTBYOojzy5V2oHs"/>
+</div>
+<h1 class="font-['Manrope'] font-extrabold text-xl text-blue-700 dark:text-blue-400 tracking-tighter">MediNest</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400">notifications</span>
+</button>
+</header>
+<!-- Content Canvas -->
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Header Section -->
+<section class="mb-8">
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface mb-2">Doctor Appointments</h2>
+<p class="text-on-surface-variant text-sm font-medium">Manage your upcoming consultations and health checkups.</p>
+</section>
+<!-- Stats Bento (Asymmetric) -->
+<div class="grid grid-cols-12 gap-4 mb-8">
+<div class="col-span-8 p-6 rounded-xl bg-primary-container text-on-primary-container flex flex-col justify-between aspect-[2/1] relative overflow-hidden">
+<div class="z-10">
+<p class="text-xs font-semibold uppercase tracking-wider opacity-80">Next Session</p>
+<h3 class="text-2xl font-bold mt-1">Tomorrow, 10:45 AM</h3>
+</div>
+<div class="z-10 flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-sm font-medium">Cardiology Clinic</span>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+</div>
+<div class="col-span-4 p-6 rounded-xl bg-secondary-container text-on-secondary-container flex flex-col items-center justify-center text-center">
+<span class="text-4xl font-bold">04</span>
+<p class="text-[10px] font-bold uppercase mt-1">Pending</p>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 mb-8 overflow-x-auto pb-2 no-scrollbar">
+<span class="px-5 py-2 rounded-full bg-primary text-on-primary text-sm font-semibold">Upcoming</span>
+<span class="px-5 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium">Past</span>
+<span class="px-5 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium">Cancelled</span>
+</div>
+<!-- Appointment Cards List -->
+<div class="space-y-6">
+<!-- Appointment 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] relative">
+<div class="flex items-start justify-between mb-4">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-xl overflow-hidden bg-surface-container-low">
+<img alt="Dr. Sarah Jenkins" class="w-full h-full object-cover" data-alt="Close up portrait of a female doctor with a stethoscope around her neck, professional medical setting, soft bright lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN1925jAqm0mzzNDoBd9bddIGg6VyAmRwWt4fco-dJhWIxPHOyuUGaWpVPN7bskCBdPfBf7f_gF-uW_ngbc-PZ1xDvrbQHj4bwgUqFAPHXVyRl7n3s1KWJSrRPXD8vASR6o14B1T7WugaxYGNdoKoa36NMxxgrTjuuU2vBMy0LEOBjVhf3RdE5XaGKj48BPwt0stuFEWsVAfeoD7O4H0dljQWWwubxy3N3b0IJqEjghC9wx0KaHn2PrAGtEKdn_wAzdc7_XrST8N-0"/>
+</div>
+<div>
+<h4 class="font-bold text-lg text-on-surface leading-tight">Dr. Sarah Jenkins</h4>
+<p class="text-sm text-secondary font-medium">Cardiologist</p>
+<p class="text-xs text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                                City Heart Institute
+                            </p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4 flex justify-between items-center mb-5">
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-1">Schedule</p>
+<p class="font-bold text-on-surface tracking-tight">Tuesday, Oct 24</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-1">Time</p>
+<p class="font-bold text-primary tracking-tight">10:45 AM</p>
+</div>
+</div>
+<button class="w-full bg-surface-container-high text-primary font-bold py-4 rounded-xl hover:bg-primary-fixed transition-all flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined text-lg group-active:scale-90 transition-transform">event_available</span>
+                    Add to Calendar
+                </button>
+</div>
+<!-- Appointment 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] relative">
+<div class="flex items-start justify-between mb-4">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-xl overflow-hidden bg-surface-container-low">
+<img alt="Dr. Michael Chen" class="w-full h-full object-cover" data-alt="Headshot of a male doctor in his 40s wearing a white coat, modern clinic interior background, soft professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1z6s8T-yH0MlijnquB0jKlRK01vks-yP7AK3pAh_MMcjxpD-OsHjj4Cg6MLWe9YnCu__MDykzSjsIJi0wA5R7mM0cAkyik8UWn1YsAfNQRcL9aLWHBkTToUmsN6H0-i37hFQc5ST7zjZhKwjINSJnoFhKNLIXYZcbqdnpHpnWsJJrseviB-tgc_YS9fqVXG4yax_Wd1InjoY-HDP2eHkdVjlEvAQQOBdRYpZAFndus9O92wzGxzhnwQLHssq9fs9tzZomzweOHNWk"/>
+</div>
+<div>
+<h4 class="font-bold text-lg text-on-surface leading-tight">Dr. Michael Chen</h4>
+<p class="text-sm text-secondary font-medium">Neurologist</p>
+<p class="text-xs text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                                North Medical Center
+                            </p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4 flex justify-between items-center mb-5">
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-1">Schedule</p>
+<p class="font-bold text-on-surface tracking-tight">Friday, Oct 27</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-1">Time</p>
+<p class="font-bold text-primary tracking-tight">02:30 PM</p>
+</div>
+</div>
+<button class="w-full bg-surface-container-high text-primary font-bold py-4 rounded-xl hover:bg-primary-fixed transition-all flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined text-lg group-active:scale-90 transition-transform">event_available</span>
+                    Add to Calendar
+                </button>
+</div>
+</div>
+</main>
+<!-- FAB for New Appointment -->
+<button class="fixed right-6 bottom-28 w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center z-40 active:scale-95 duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 600;">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-6 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl rounded-t-[24px] z-50 shadow-[0_-8px_24px_-4px_rgba(0,0,0,0.06)]">
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 transition-all active:scale-90 duration-200 ease-out cursor-pointer">
+<span class="material-symbols-outlined">home_health</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 transition-all active:scale-90 duration-200 ease-out cursor-pointer">
+<span class="material-symbols-outlined">family_restroom</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Family</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 transition-all active:scale-90 duration-200 ease-out cursor-pointer">
+<span class="material-symbols-outlined">medication</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Medicines</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 rounded-full px-5 py-1.5 transition-all active:scale-90 duration-200 ease-out cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Records</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:opacity-80 transition-all active:scale-90 duration-200 ease-out cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Manrope'] font-medium text-[11px] mt-1">Settings</span>
+</div>
+</nav>
+</body></html>
