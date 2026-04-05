@@ -2,23 +2,18 @@ import 'dart:io';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/data/latest_all.dart' as tz_data;
 import 'package:timezone/timezone.dart' as tz;
-import 'package:flutter_timezone/flutter_timezone.dart';
 
 class NotificationService {
   static final FlutterLocalNotificationsPlugin _plugin =
       FlutterLocalNotificationsPlugin();
 
   static Future<void> init() async {
-    // Initialize timezone database
     tz_data.initializeTimeZones();
-    final String timeZoneName = await FlutterTimezone.getLocalTimezone();
-    tz.setLocalLocation(tz.getLocation(timeZoneName));
+    tz.setLocalLocation(tz.UTC);
 
-    // Android initialization settings
     const AndroidInitializationSettings androidSettings =
         AndroidInitializationSettings('@mipmap/ic_launcher');
 
-    // Darwin (iOS/macOS) initialization settings — replaces deprecated IOSInitializationSettings
     const DarwinInitializationSettings darwinSettings =
         DarwinInitializationSettings(
       requestAlertPermission: true,
@@ -34,16 +29,12 @@ class NotificationService {
 
     await _plugin.initialize(
       initSettings,
-      onDidReceiveNotificationResponse: (NotificationResponse response) async {
-        // Handle notification tap
-      },
+      onDidReceiveNotificationResponse: (NotificationResponse response) async {},
     );
 
-    // Request permissions for Android 13+ and exact alarms
     if (Platform.isAndroid) {
       final androidImpl = _plugin.resolvePlatformSpecificImplementation<
           AndroidFlutterLocalNotificationsPlugin>();
-
       if (androidImpl != null) {
         await androidImpl.requestNotificationsPermission();
         await androidImpl.requestExactAlarmsPermission();
@@ -61,7 +52,7 @@ class NotificationService {
       id,
       title,
       body,
-      tz.TZDateTime.from(scheduledDate, tz.local),
+      tz.TZDateTime.from(scheduledDate, tz.UTC),
       const NotificationDetails(
         android: AndroidNotificationDetails(
           'medicine_channel_id',
@@ -72,8 +63,6 @@ class NotificationService {
         ),
       ),
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-      uiLocalNotificationDateInterpretation:
-          UILocalNotificationDateInterpretation.absoluteTime,
       matchDateTimeComponents: DateTimeComponents.time,
     );
   }
